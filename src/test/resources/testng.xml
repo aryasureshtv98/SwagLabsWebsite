@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="SwagLabs ECommerce Flow Suite" verbose="2">
+    <parameter name="username" value="standard_user"/>
+    <parameter name="password" value="secret_sauce"/>
+    <listeners>
+        <listener class-name="listeners.TestListener"/>
+    </listeners>
+    <test name="E-Commerce Flow Group Execution">
+        <!--<groups>
+            <run>
+                <include name="ECommerceFlow"/>
+            </run>
+        </groups>-->
+        <classes>
+            <class name="tests.ECommerceFullFlowTest"/>
+        </classes>       
+    </test>     
+</suite>
